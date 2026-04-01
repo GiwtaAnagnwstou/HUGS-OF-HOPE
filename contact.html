@@ -1,141 +1,353 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ΕΠΙΚΟΙΝΩΝΙΑ</title>
-<!-- Bootstrap -->
-<link href="file:///C:/Users/anagn/OneDrive/Desktop/HUGS%20OF%20HOPE/css/bootstrap-4.4.1.css" rel="stylesheet">
+<title>Hugs of Hope | Contact</title>
+
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
 <style>
-  /* Custom styles for navigation */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+  body {
+    background-color: #f4f6f8;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
   }
 
-  header nav ul {
-    list-style-type: none;
+  .page-wrapper {
+    width: min(1100px, 94%);
+    margin: 20px auto;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  header.main-header {
+    background-color: #4d4d4d;
+    padding: 20px 25px 12px;
+  }
+
+  .logo {
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 18px 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+
+  nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #f2f2f2; /* Light gray background */
-    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    background-color: #eef2f3;
+    border-radius: 10px;
+    padding: 12px;
   }
 
-  header nav ul li {
-    float: left;
-  }
-
-  header nav ul li a {
+  nav ul li a {
     display: block;
-    color: #000; /* Black text color */
-    text-align: center;
-    padding: 14px 16px;
+    color: #333;
     text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.25s ease;
   }
 
-  /* Change background color on hover */
-  header nav ul li a:hover {
-    background-color: #ddd; /* Light gray background on hover */
+  nav ul li a:hover {
+    background-color: #52bad5;
+    color: #fff;
+  }
+
+  .section-title {
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .intro-block {
+    padding: 35px 25px 20px;
+    text-align: center;
+  }
+
+  .intro-block p {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  .map-section {
+    text-align: center;
+    padding: 10px 20px 30px;
+  }
+
+  .map-section iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 420px;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .contact-banner {
+    background-color: #52bad5;
+    color: white;
+    text-align: center;
+    padding: 26px 20px;
+    margin: 10px 25px 0;
+    border-radius: 10px;
+  }
+
+  .contact-banner h2 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .form-section {
+    padding: 35px 25px;
+    text-align: center;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    align-items: center;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  .contact-form label {
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"] {
+    width: 220px;
+  }
+
+  .contact-form textarea {
+    width: 280px;
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .contact-form input[type="submit"] {
+    background-color: #4d4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+  }
+
+  .contact-form input[type="submit"]:hover {
+    background-color: #52bad5;
+  }
+
+  .info-section {
+    padding: 10px 25px 40px;
+  }
+
+  .info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .info-box {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 24px 20px;
+    min-width: 240px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .info-box h3 {
+    color: #52bad5;
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+
+  .info-box p,
+  .info-box address {
+    margin: 0;
+    line-height: 1.8;
+    color: #555;
+    font-style: normal;
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    max-width: 220px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .newsletter-form button {
+    background-color: #4d4d4d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .newsletter-form button:hover {
+    background-color: #52bad5;
+  }
+
+  footer {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      font-size: 1.6rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+    }
+
+    .contact-banner h2 {
+      font-size: 1.6rem;
+    }
+
+    .contact-form {
+      flex-direction: column;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      max-width: 420px;
+    }
   }
 </style>
 </head>
+
 <body>
-<header>
-  <a href="">
+<div class="page-wrapper">
+
+  <header class="main-header">
     <h4 class="logo">CONTACT US</h4>
-  </a>
-  <nav>
-    <ul>
+    <nav>
+      <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="about.html">ABOUT US</a></li>
         <li><a href="donate.html">DONATE</a></li>
         <li><a href="events.html">EVENTS</a></li>
-    </ul>
-  </nav>
-</header>
-    <section>
-      <div class="jumbotron text-center mt-2">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>ΒΡΕΙΤΕ ΜΑΣ&nbsp;</h1>
-               <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.2915001925433!2d23.06506151530865!3d40.621165879341714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a8497cdd3b65d9%3A0x8722a4d95c1cb93f!2sMandilara%206%2C%2057001%20Thermi!5e0!3m2!1sen!2sgr!4v1647637343053!5m2!1sen!2sgr" target="_blank">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.2915001925433!2d23.06506151530865!3d40.621165879341714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a8497cdd3b65d9%3A0x8722a4d95c1cb93f!2sMandilara%206%2C%2057001%20Thermi!5e0!3m2!1sen!2sgr!4v1647637343053!5m2!1sen!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-				</a>
-		
-            </div>
-          </div>
-        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="intro-block">
+    <h1 class="section-title">ΒΡΕΙΤΕ ΜΑΣ</h1>
+  </section>
+
+  <section class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.2915001925433!2d23.06506151530865!3d40.621165879341714!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a8497cdd3b65d9%3A0x8722a4d95c1cb93f!2sMandilara%206%2C%2057001%20Thermi!5e0!3m2!1sen!2sgr!4v1647637343053!5m2!1sen!2sgr" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section class="intro-block">
+    <h1 class="section-title">Συμπληρώστε τη φόρμα με τα στοιχεία σας</h1>
+    <p>
+      Μπορείτε να συμπληρώσετε την παρακάτω φόρμα με τα στοιχεία σας, εάν ενδιαφέρεστε για την υιοθεσία
+      κάποιου από τα ζωάκια μας ή χρειάζεστε κάποια πληροφορία. Στη συνέχεια εμείς θα σας στείλουμε
+      ένα email επιβεβαίωσης.
+    </p>
+  </section>
+
+  <section class="contact-banner">
+    <h2>Επικοινωνία</h2>
+  </section>
+
+  <section class="form-section">
+    <form class="contact-form" action="#" method="POST">
+      <label for="name">Όνομα:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Μήνυμα:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <input type="submit" value="Αποστολή">
+    </form>
+  </section>
+
+  <section class="info-section">
+    <div class="info-grid">
+      <div class="info-box">
+        <h3>Τηλ. επικοινωνίας</h3>
+        <p>GR, T- 2310 334 331</p>
+        <p>6946452177</p>
       </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h1>Συμπηρώστε την φόρμα με τα στοιχεία σας&nbsp;</h1>
-            <p>Επιπλέον, μπορείτε να συμπληρώσετε την παρακάτω φόρμα με τα στοιχεία σας, εάν ενδιαφέρεστε για την υιοθεσία κάποιου από τα ζωάκια μας ή χρειάζεστε κάποια πληροφορία&nbsp; και στη συνέχεια εμείς θα σας στείλουμε ένα μέιλ επιβεβαίωσης.&nbsp; &nbsp;</p>
-          </div>
-        </div>
-      </div>
-		<header>
-        <h1>Επικοινωνία</h1>
-    </header>
-    <div class="container">
-        <form action="#" method="POST">
-            <label for="name">Όνομα:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Μήνυμα:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <input type="submit" value="Αποστολή">
-        </form>
-    </div>
-    </section>
-   <section>
- <div class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-12">
-        <h3 class="text-center">Τηλ. επικοινωνίας&nbsp;</h3>
-        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; GR, T-&nbsp; &nbsp;2310 334 331,</p>
-        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6946452177&nbsp;</p>
-      </div>
-      <div class="col-md-4 col-12">
-        <h3 class="text-center">Email&nbsp;</h3>
-        <address class="text-center">
+
+      <div class="info-box">
+        <h3>Email</h3>
+        <address>
           <strong>info@hugsoflove.gr</strong>
-        <abbr title="Phone">&nbsp;</abbr>
         </address>
       </div>
-      <div class="col-md-4 col-12">
-        <h3 class="text-center">NEWSLETTER</h3>
-        <form>
-          <div class="form-group col-12">
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-            <button type="submit" class="btn btn-dark mt-2">Subscribe</button>
-          </div>
+
+      <div class="info-box">
+        <h3>Newsletter</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter email">
+          <button type="submit">Subscribe</button>
         </form>
       </div>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    <p>Copyright © Hugs of Hope. All rights reserved.</p>
+  </footer>
+
 </div>
-<hr>
-<footer class="text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <p>Copyright © HugofHope. All rights reserved.</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="file:///C:/Users/anagn/OneDrive/Desktop/HUGS%20OF%20HOPE/js/jquery-3.4.1.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="file:///C:/Users/anagn/OneDrive/Desktop/HUGS%20OF%20HOPE/js/popper.min.js"></script>
-<script src="file:///C:/Users/anagn/OneDrive/Desktop/HUGS%20OF%20HOPE/js/bootstrap-4.4.1.js"></script>
+</body>
+</html>
